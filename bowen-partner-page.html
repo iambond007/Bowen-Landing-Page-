@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Embra × William H. Bowen School of Law — Partner Briefing</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --maroon:#6B1C35;--maroon-dk:#4A1224;--maroon-lt:rgba(107,28,53,0.07);
+  --orange:#FF6600;--orange-dk:#CC3300;
+  --gold:#C9A84C;--gold-lt:rgba(201,168,76,0.10);
+  --cream:#F8F5F0;--white:#FFFFFF;
+  --ink:#1A0E14;--ink-mid:#3D2530;--ink-lt:#8A7080;
+  --border:rgba(107,28,53,0.11);
+  --green:#2A7A4B;--green-lt:rgba(42,122,75,0.10);
+  --r:12px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:"DM Sans",sans-serif;background:var(--cream);color:var(--ink);-webkit-font-smoothing:antialiased;}
+
+@media print{
+  .no-print{display:none!important;}
+  body{background:white;}
+  @page{margin:0.55in 0.65in;size:letter landscape;}
+  .wrapper{padding:0 0 40px;}
+  .hero{padding:20px 0 28px;}
+  .section,.commitment,.stats-section{padding:28px 0;}
+  .print-header{display:flex!important;}
+  .hero-headline{font-size:34px!important;}
+  .commit-quote{font-size:17px!important;}
+  .card{padding:18px 16px;}
+  .bowen-name-display{font-size:32px!important;}
+  .footer{padding:18px 0 0;}
+}
+
+/* TOPBAR */
+.topbar{position:sticky;top:0;z-index:100;height:56px;background:rgba(248,245,240,0.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 56px;}
+.tb-brand{display:flex;align-items:center;gap:14px;}
+.embra-wordmark{font-family:"Cormorant Garamond",serif;font-size:21px;font-weight:700;color:var(--orange);letter-spacing:-0.3px;}
+.tb-divider{width:1px;height:20px;background:var(--border);}
+.tb-label{font-size:11px;font-weight:600;letter-spacing:0.06em;color:var(--maroon);text-transform:uppercase;}
+.tb-actions{display:flex;align-items:center;gap:8px;}
+.btn-admin{display:flex;align-items:center;gap:7px;padding:7px 16px;border-radius:8px;border:1.5px solid var(--border);background:white;font-family:"DM Sans",sans-serif;font-size:12px;font-weight:600;color:var(--ink-mid);cursor:pointer;transition:all .18s;}
+.btn-admin:hover{border-color:var(--maroon);color:var(--maroon);background:var(--maroon-lt);}
+.btn-export{display:flex;align-items:center;gap:7px;padding:7px 16px;border-radius:8px;border:1.5px solid var(--maroon);background:var(--maroon);font-family:"DM Sans",sans-serif;font-size:12px;font-weight:600;color:white;cursor:pointer;transition:all .18s;}
+.btn-export:hover{background:var(--maroon-dk);border-color:var(--maroon-dk);}
+
+/* WRAPPER */
+.wrapper{max-width:1080px;margin:0 auto;padding:0 56px 80px;}
+
+/* PRINT HEADER */
+.print-header{display:none;padding-bottom:18px;margin-bottom:24px;border-bottom:2px solid var(--maroon);flex-direction:row;align-items:center;justify-content:space-between;}
+.ph-logo{font-family:"Cormorant Garamond",serif;font-size:22px;font-weight:700;color:var(--orange);}
+.ph-right{font-size:11px;color:var(--ink-lt);text-align:right;line-height:1.6;}
+
+/* HERO */
+.hero{padding:60px 0 68px;border-bottom:1px solid var(--border);}
+
+.hero-top{display:flex;align-items:flex-end;justify-content:space-between;padding-bottom:44px;border-bottom:1px solid var(--border);margin-bottom:48px;}
+.hero-top-left{}
+.partner-badge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(201,168,76,0.35);background:rgba(201,168,76,0.08);border-radius:4px;padding:5px 13px;margin-bottom:14px;}
+.badge-rule{width:16px;height:1px;background:var(--gold);}
+.badge-text{font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);}
+.bowen-name-display{font-family:"Cormorant Garamond",serif;font-size:clamp(32px,3.6vw,50px);font-weight:600;color:var(--maroon);line-height:1.05;letter-spacing:-0.5px;margin-bottom:10px;white-space:nowrap;}
+.hero-kicker{font-family:"Cormorant Garamond",serif;font-size:14px;font-weight:400;font-style:italic;color:var(--ink-lt);letter-spacing:0.03em;}
+.embra-mark{display:flex;align-items:center;gap:12px;}
+.embra-mark-logo{font-family:"Cormorant Garamond",serif;font-size:24px;font-weight:700;color:var(--orange);}
+.embra-mark-sep{width:1px;height:24px;background:var(--border);}
+.embra-mark-label{font-size:11px;color:var(--ink-lt);line-height:1.4;font-weight:400;}
+
+.hero-bottom{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
+.hero-headline{font-family:"Cormorant Garamond",serif;font-size:clamp(38px,4.2vw,56px);font-weight:300;line-height:1.09;color:var(--ink);margin-bottom:22px;letter-spacing:-0.5px;}
+.hero-headline strong{font-weight:600;color:var(--maroon);display:block;}
+.hero-rule{width:40px;height:2px;background:linear-gradient(90deg,var(--maroon),var(--orange));margin-bottom:20px;}
+.hero-body{font-size:14px;line-height:1.75;color:var(--ink-mid);margin-bottom:0;font-weight:300;}
+
+.pilot-details{border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-bottom:24px;}
+.detail-row{display:flex;align-items:baseline;justify-content:space-between;padding:13px 0;border-bottom:1px solid var(--border);}
+.detail-row:last-child{border-bottom:none;}
+.detail-label{font-size:10px;font-weight:700;letter-spacing:0.10em;text-transform:uppercase;color:var(--ink-lt);}
+.detail-value{font-family:"Cormorant Garamond",serif;font-size:15px;font-weight:600;color:var(--ink);letter-spacing:-0.1px;}
+.detail-value.hi{color:var(--maroon);}
+.pilot-note{font-family:"Cormorant Garamond",serif;font-size:13px;font-style:italic;color:var(--ink-lt);line-height:1.6;}
+
+/* STATS */
+.stats-section{padding:56px 0;border-bottom:1px solid var(--border);}
+.section-label{font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--orange);margin-bottom:8px;}
+.section-title{font-family:"Cormorant Garamond",serif;font-size:32px;font-weight:300;line-height:1.15;color:var(--ink);letter-spacing:-0.3px;margin-bottom:32px;}
+.section-title em{font-style:italic;color:var(--maroon);}
+
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-bottom:20px;}
+.stat-card{background:white;padding:24px 20px;position:relative;overflow:hidden;}
+.stat-card.hero-stat{background:var(--maroon);}
+.stat-card.hero-stat .s-label{color:rgba(255,255,255,.5);}
+.stat-card.hero-stat .s-val{color:white;}
+.stat-card.hero-stat .s-note{color:rgba(255,255,255,.4);}
+.stat-card::after{content:"";position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--maroon),var(--orange));transform:scaleX(0);transform-origin:left;transition:transform .3s;}
+.stat-card:hover::after,.stat-card.hero-stat::after{transform:scaleX(1);}
+.stat-card.hero-stat::after{background:linear-gradient(90deg,var(--gold),var(--orange));}
+.s-label{font-size:9px;font-weight:700;letter-spacing:0.11em;text-transform:uppercase;color:var(--ink-lt);margin-bottom:8px;}
+.s-val{font-family:"Cormorant Garamond",serif;font-size:42px;font-weight:700;line-height:1;color:var(--ink);margin-bottom:6px;letter-spacing:-1px;}
+.s-val.blank{font-size:26px;color:var(--ink-lt);font-style:italic;}
+.s-note{font-size:11px;color:var(--ink-lt);}
+
+.trend-row{display:grid;grid-template-columns:2fr 1fr;gap:14px;}
+.trend-card{background:white;border:1px solid var(--border);border-radius:var(--r);padding:22px;}
+.trend-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;}
+.trend-title{font-size:13px;font-weight:700;color:var(--ink);}
+.trend-meta{font-family:"DM Mono",monospace;font-size:10px;color:var(--ink-lt);}
+.chart-empty{height:120px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;border:1.5px dashed var(--border);border-radius:8px;}
+.ce-text{font-size:11px;color:var(--ink-lt);text-align:center;line-height:1.5;}
+#growth-svg{width:100%;height:120px;display:none;}
+.br-list{display:flex;flex-direction:column;}
+.br-row{display:flex;align-items:center;gap:8px;padding:9px 0;border-bottom:1px solid var(--border);}
+.br-row:last-child{border-bottom:none;}
+.br-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.br-lbl{font-size:11px;color:var(--ink-mid);flex:1;}
+.br-track{flex:1;height:3px;background:var(--maroon-lt);border-radius:100px;overflow:hidden;}
+.br-fill{height:100%;border-radius:100px;transition:width .7s cubic-bezier(.4,0,.2,1);width:0%;}
+.br-pct{font-family:"DM Mono",monospace;font-size:10px;color:var(--ink);min-width:26px;text-align:right;}
+.updates-feed{display:flex;flex-direction:column;}
+.update-item{padding:12px 0;border-bottom:1px solid var(--border);display:flex;gap:14px;align-items:flex-start;}
+.update-item:last-child{border-bottom:none;}
+.update-date{font-family:"DM Mono",monospace;font-size:10px;color:var(--ink-lt);min-width:72px;padding-top:2px;}
+.update-dot{width:6px;height:6px;border-radius:50%;background:var(--maroon);flex-shrink:0;margin-top:4px;}
+.update-text{font-size:13px;color:var(--ink-mid);line-height:1.5;}
+.no-updates{font-size:12px;color:var(--ink-lt);font-style:italic;padding:14px 0;}
+
+/* WHAT THIS MEANS */
+.section{padding:56px 0;border-bottom:1px solid var(--border);}
+.section-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:36px;}
+.section-sub{font-size:12px;color:var(--ink-lt);max-width:240px;text-align:right;line-height:1.6;}
+.cards-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);}
+.card{background:white;padding:30px 26px;position:relative;}
+.card-accent{position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--maroon),var(--orange));opacity:0;transition:opacity .2s;}
+.card:hover .card-accent{opacity:1;}
+.card-num{font-family:"Cormorant Garamond",serif;font-size:50px;font-weight:300;line-height:1;color:rgba(107,28,53,0.07);margin-bottom:14px;display:block;letter-spacing:-2px;}
+.card-title{font-size:11px;font-weight:700;letter-spacing:0.06em;color:var(--maroon);text-transform:uppercase;margin-bottom:10px;}
+.card-body{font-size:13px;color:var(--ink-mid);line-height:1.7;font-weight:300;}
+
+/* COMMITMENT */
+.commitment{padding:56px 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
+.commit-quote{font-family:"Cormorant Garamond",serif;font-size:22px;font-weight:300;font-style:italic;line-height:1.55;color:var(--ink);margin-bottom:18px;letter-spacing:-0.2px;}
+.commit-attr{font-size:11px;color:var(--ink-lt);letter-spacing:0.06em;text-transform:uppercase;font-weight:500;}
+.commit-list{display:flex;flex-direction:column;}
+.commit-item{display:flex;align-items:flex-start;gap:14px;padding:14px 0;border-bottom:1px solid var(--border);}
+.commit-item:last-child{border-bottom:none;}
+.commit-dot{width:5px;height:5px;border-radius:50%;background:var(--maroon);flex-shrink:0;margin-top:6px;}
+.commit-text h5{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:3px;}
+.commit-text p{font-size:12px;color:var(--ink-lt);line-height:1.6;font-weight:300;}
+
+/* FOOTER */
+.footer{padding:36px 0 0;display:flex;align-items:center;justify-content:space-between;}
+.footer-left{display:flex;align-items:center;gap:14px;}
+.footer-logo{font-family:"Cormorant Garamond",serif;font-size:20px;font-weight:700;color:var(--orange);}
+.footer-sep{width:1px;height:18px;background:var(--border);}
+.footer-tagline{font-size:11px;color:var(--ink-lt);font-weight:300;}
+.footer-contact{font-size:12px;color:var(--ink-lt);text-align:right;line-height:1.7;}
+.footer-contact strong{display:block;font-size:13px;font-weight:600;color:var(--ink-mid);margin-bottom:1px;}
+
+/* PASSWORD MODAL */
+#pass-modal{position:fixed;inset:0;z-index:200;background:rgba(26,14,20,.55);backdrop-filter:blur(10px);display:none;align-items:center;justify-content:center;padding:24px;}
+#pass-modal.open{display:flex;}
+.pass-card{background:white;border-radius:18px;width:100%;max-width:380px;padding:36px 34px;box-shadow:0 32px 80px rgba(0,0,0,.22);animation:popUp .26s cubic-bezier(.4,0,.2,1);}
+@keyframes popUp{from{opacity:0;transform:translateY(12px) scale(.98);}to{opacity:1;transform:translateY(0) scale(1);}}
+.pass-logo{font-family:"Cormorant Garamond",serif;font-size:22px;font-weight:700;color:var(--orange);margin-bottom:3px;}
+.pass-sub-logo{font-size:11px;color:var(--ink-lt);margin-bottom:22px;}
+.pass-title{font-family:"Cormorant Garamond",serif;font-size:20px;font-weight:700;color:var(--ink);margin-bottom:4px;}
+.pass-sub{font-size:13px;color:var(--ink-lt);margin-bottom:20px;}
+.pass-lbl{font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-mid);margin-bottom:6px;display:block;}
+.pass-input{width:100%;padding:11px 13px;border:1.5px solid var(--border);border-radius:9px;font-family:"DM Mono",monospace;font-size:14px;color:var(--ink);background:var(--cream);outline:none;transition:all .2s;}
+.pass-input:focus{border-color:var(--maroon);box-shadow:0 0 0 3px rgba(107,28,53,.09);}
+.pass-input.shake{animation:shake .4s ease;border-color:#D93025;}
+@keyframes shake{0%,100%{transform:translateX(0);}20%{transform:translateX(-6px);}40%{transform:translateX(6px);}60%{transform:translateX(-4px);}80%{transform:translateX(4px);}}
+.pass-err{font-size:12px;color:#D93025;margin-top:6px;display:none;}
+.pass-btn{width:100%;margin-top:16px;padding:12px;border:none;border-radius:9px;background:var(--maroon);color:white;font-family:"DM Sans",sans-serif;font-size:14px;font-weight:600;cursor:pointer;transition:background .2s;}
+.pass-btn:hover{background:var(--maroon-dk);}
+.pass-cancel{display:block;text-align:center;margin-top:12px;font-size:12px;color:var(--ink-lt);cursor:pointer;}
+.pass-cancel:hover{color:var(--ink);}
+
+/* ADMIN DRAWER */
+#admin-panel{position:fixed;inset:0;z-index:150;display:none;}
+#admin-panel.open{display:flex;}
+.admin-overlay{position:absolute;inset:0;background:rgba(26,14,20,.4);backdrop-filter:blur(6px);}
+.admin-drawer{position:absolute;top:0;right:0;bottom:0;width:100%;max-width:580px;background:white;overflow-y:auto;box-shadow:-20px 0 60px rgba(0,0,0,.15);animation:slideIn .3s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;}
+@keyframes slideIn{from{transform:translateX(36px);opacity:0;}to{transform:translateX(0);opacity:1;}}
+.drawer-head{position:sticky;top:0;z-index:10;background:white;padding:20px 28px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
+.drawer-title{font-family:"Cormorant Garamond",serif;font-size:20px;font-weight:700;color:var(--ink);}
+.drawer-sub{font-size:11px;color:var(--ink-lt);margin-top:1px;}
+.drawer-close{width:30px;height:30px;border-radius:7px;border:1.5px solid var(--border);background:transparent;cursor:pointer;font-size:15px;color:var(--ink-lt);display:flex;align-items:center;justify-content:center;transition:all .15s;}
+.drawer-close:hover{background:var(--maroon-lt);color:var(--maroon);border-color:var(--maroon);}
+.drawer-body{padding:24px 28px;flex:1;}
+.fsec{margin-bottom:24px;padding-bottom:22px;border-bottom:1px solid var(--border);}
+.fsec:last-of-type{border-bottom:none;margin-bottom:0;}
+.fsec-title{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-lt);margin-bottom:13px;}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:11px;}
+.ff{display:flex;flex-direction:column;gap:4px;}
+.ff label{font-size:12px;font-weight:600;color:var(--ink-mid);}
+.ff input,.ff select,.ff textarea{padding:9px 11px;border:1.5px solid var(--border);border-radius:8px;font-family:"DM Sans",sans-serif;font-size:13px;color:var(--ink);background:var(--cream);outline:none;transition:all .18s;}
+.ff input:focus,.ff select:focus,.ff textarea:focus{border-color:var(--maroon);box-shadow:0 0 0 3px rgba(107,28,53,.08);}
+.ff .hint{font-size:10px;color:var(--ink-lt);}
+.drawer-foot{position:sticky;bottom:0;background:white;border-top:1px solid var(--border);padding:14px 28px;display:flex;gap:8px;justify-content:flex-end;}
+.btn-cancel{padding:9px 18px;border-radius:8px;border:1.5px solid var(--border);background:transparent;font-family:"DM Sans",sans-serif;font-size:13px;font-weight:500;color:var(--ink-mid);cursor:pointer;transition:all .15s;}
+.btn-cancel:hover{border-color:var(--ink-mid);color:var(--ink);}
+.btn-save{padding:9px 22px;border-radius:8px;border:none;background:var(--maroon);color:white;font-family:"DM Sans",sans-serif;font-size:13px;font-weight:600;cursor:pointer;transition:all .18s;display:flex;align-items:center;gap:6px;}
+.btn-save:hover{background:var(--maroon-dk);}
+.update-inputs{display:flex;flex-direction:column;gap:8px;}
+.update-input-row{display:grid;grid-template-columns:110px 1fr 28px;gap:7px;align-items:start;}
+.update-input-row input{padding:8px 10px;border:1.5px solid var(--border);border-radius:7px;font-family:"DM Sans",sans-serif;font-size:12px;color:var(--ink);background:var(--cream);outline:none;}
+.update-input-row input:focus{border-color:var(--maroon);}
+.remove-update{width:28px;height:34px;border:1.5px solid var(--border);border-radius:7px;background:transparent;cursor:pointer;color:var(--ink-lt);font-size:16px;display:flex;align-items:center;justify-content:center;transition:all .15s;}
+.remove-update:hover{border-color:#D93025;color:#D93025;}
+.add-update-btn{margin-top:6px;padding:7px 14px;border-radius:7px;border:1.5px dashed var(--border);background:transparent;font-family:"DM Sans",sans-serif;font-size:12px;color:var(--ink-lt);cursor:pointer;transition:all .15s;width:fit-content;}
+.add-update-btn:hover{border-color:var(--maroon);color:var(--maroon);}
+
+/* TOAST */
+.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(12px);z-index:500;background:var(--ink);color:white;border-radius:9px;padding:10px 20px;font-size:13px;font-weight:500;opacity:0;pointer-events:none;transition:all .3s;white-space:nowrap;}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
+.stat-card{animation:fadeUp .5s ease both;}
+.stat-card:nth-child(1){animation-delay:.05s;}
+.stat-card:nth-child(2){animation-delay:.10s;}
+.stat-card:nth-child(3){animation-delay:.15s;}
+.stat-card:nth-child(4){animation-delay:.20s;}
+
+@media(max-width:900px){
+  .topbar,.wrapper{padding-left:22px;padding-right:22px;}
+  .hero-top{flex-direction:column;gap:20px;}
+  .hero-bottom{grid-template-columns:1fr;gap:32px;}
+  .bowen-name-display{white-space:normal;}
+  .stats-grid{grid-template-columns:1fr 1fr;}
+  .trend-row{grid-template-columns:1fr;}
+  .cards-row,.commitment{grid-template-columns:1fr;}
+  .commitment{gap:32px;}
+  .section-header{flex-direction:column;align-items:flex-start;gap:6px;}
+  .section-sub{text-align:left;max-width:100%;}
+  .footer{flex-direction:column;gap:18px;align-items:flex-start;}
+  .footer-contact{text-align:left;}
+  .admin-drawer{max-width:100%;}
+  .fgrid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<nav class="topbar no-print">
+  <div class="tb-brand">
+    <span class="embra-wordmark">Embra</span>
+    <div class="tb-divider"></div>
+    <span class="tb-label">Partner Briefing &middot; Bowen School of Law</span>
+  </div>
+  <div class="tb-actions">
+    <button class="btn-admin" id="adminBtn">
+      <svg width="12" height="12" viewBox="0 0 13 13" fill="none">
+        <rect x="1" y="5" width="11" height="7" rx="1.5" stroke="currentColor" stroke-width="1.3"/>
+        <path d="M3.5 5V3.5a3 3 0 016 0V5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+        <circle cx="6.5" cy="8.5" r=".9" fill="currentColor"/>
+      </svg>
+      Admin
+    </button>
+    <button class="btn-export" id="exportBtn">
+      <svg width="12" height="12" viewBox="0 0 13 13" fill="none">
+        <path d="M2.5 9.5H1.5C1.2 9.5 1 9.3 1 9V5.5C1 5.2 1.2 5 1.5 5H11.5C11.8 5 12 5.2 12 5.5V9C12 9.3 11.8 9.5 11.5 9.5H10.5" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
+        <rect x="3.5" y="7.5" width="6" height="4" rx=".5" stroke="white" stroke-width="1.2"/>
+        <path d="M3.5 5V1.5C3.5 1.2 3.7 1 4 1H9L10.5 2.5V5" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="10" cy="7" r=".6" fill="white"/>
+      </svg>
+      Export PDF
+    </button>
+  </div>
+</nav>
+
+<div class="wrapper">
+
+  <!-- Print header -->
+  <div class="print-header">
+    <div class="ph-logo">Embra</div>
+    <div class="ph-right">Partner Briefing Document<br>William H. Bowen School of Law &middot; Spring 2026</div>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-top">
+      <div class="hero-top-left">
+        <div class="partner-badge">
+          <div class="badge-rule"></div>
+          <span class="badge-text">Official Pilot Partner &mdash; Spring 2026</span>
+          <div class="badge-rule"></div>
+        </div>
+        <p class="bowen-name-display">William H. Bowen School of Law</p>
+        <p class="hero-kicker">A new chapter for legal education in Arkansas</p>
+      </div>
+      <div class="embra-mark">
+        <span class="embra-mark-logo">Embra</span>
+        <div class="embra-mark-sep"></div>
+        <span class="embra-mark-label">AI-powered mentorship<br>for law students</span>
+      </div>
+    </div>
+
+    <div class="hero-bottom">
+      <div class="hero-left">
+        <h1 class="hero-headline">
+          Where Bowen<br>students
+          <strong>become the<br>lawyers of tomorrow.</strong>
+        </h1>
+        <div class="hero-rule"></div>
+        <p class="hero-body">
+          The William H. Bowen School of Law is Embra&rsquo;s inaugural institutional partner.
+          This partnership places Bowen at the center of a new model for legal education &mdash;
+          one built on mentorship, technology, and the belief that every law student
+          deserves world-class support.
+        </p>
+      </div>
+      <div class="hero-right">
+        <div class="pilot-details">
+          <div class="detail-row">
+            <span class="detail-label">Partnership Status</span>
+            <span class="detail-value hi">Official Pilot Partner</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Institution</span>
+            <span class="detail-value">University of Arkansas Little Rock</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Program</span>
+            <span class="detail-value">William H. Bowen School of Law</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Cohort</span>
+            <span class="detail-value" id="dv-cohort">Spring 2026</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Pilot Type</span>
+            <span class="detail-value">Founding Institution</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Compliance</span>
+            <span class="detail-value">FERPA Compliant</span>
+          </div>
+        </div>
+        <p class="pilot-note">
+          Bowen is Embra&rsquo;s first partner school in the country &mdash; the institution
+          whose feedback and participation will define the platform for every
+          law school that follows.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATS & TRENDS -->
+  <div class="stats-section">
+    <p class="section-label">Program Metrics</p>
+    <h2 class="section-title">Pilot <em>at a glance</em></h2>
+
+    <div class="stats-grid">
+      <div class="stat-card hero-stat">
+        <p class="s-label">Enrolled Students</p>
+        <p class="s-val" id="sv-enrolled"><span class="blank">&mdash;</span></p>
+        <p class="s-note" id="sn-enrolled">No data entered</p>
+      </div>
+      <div class="stat-card">
+        <p class="s-label">Week-over-Week Growth</p>
+        <p class="s-val" id="sv-growth"><span class="blank">&mdash;</span></p>
+        <p class="s-note" id="sn-growth">No data entered</p>
+      </div>
+      <div class="stat-card">
+        <p class="s-label">Mentor Connections</p>
+        <p class="s-val" id="sv-mentors"><span class="blank">&mdash;</span></p>
+        <p class="s-note" id="sn-mentors">No data entered</p>
+      </div>
+      <div class="stat-card">
+        <p class="s-label">Satisfaction Score</p>
+        <p class="s-val" id="sv-sat"><span class="blank">&mdash;</span></p>
+        <p class="s-note" id="sn-sat">No data entered</p>
+      </div>
+    </div>
+
+    <div class="trend-row">
+      <div class="trend-card">
+        <div class="trend-head">
+          <span class="trend-title">Enrollment Growth Trend</span>
+          <span class="trend-meta" id="chart-meta">Awaiting data</span>
+        </div>
+        <div id="chart-empty" class="chart-empty">
+          <span class="ce-text">Growth chart appears once enrollment<br>data is entered via the Admin panel</span>
+        </div>
+        <svg id="growth-svg" viewBox="0 0 520 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="aGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#6B1C35" stop-opacity="0.14"/>
+              <stop offset="100%" stop-color="#6B1C35" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <line x1="0" y1="24" x2="520" y2="24" stroke="#f0e8ec" stroke-width="1"/>
+          <line x1="0" y1="62" x2="520" y2="62" stroke="#f0e8ec" stroke-width="1"/>
+          <line x1="0" y1="100" x2="520" y2="100" stroke="#f0e8ec" stroke-width="1"/>
+          <path id="c-area" fill="url(#aGrad)"/>
+          <path id="c-line" fill="none" stroke="#6B1C35" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <g id="c-dots"></g><g id="c-xlbls"></g><g id="c-ylbls"></g>
+        </svg>
+      </div>
+      <div class="trend-card">
+        <div class="trend-head">
+          <span class="trend-title">Student Activity</span>
+          <span class="trend-meta">Breakdown</span>
+        </div>
+        <div class="br-list">
+          <div class="br-row">
+            <div class="br-dot" style="background:#6B1C35"></div>
+            <span class="br-lbl">Active weekly</span>
+            <div class="br-track"><div class="br-fill" id="bf-active" style="background:#6B1C35"></div></div>
+            <span class="br-pct" id="bp-active">&mdash;</span>
+          </div>
+          <div class="br-row">
+            <div class="br-dot" style="background:#FF6600"></div>
+            <span class="br-lbl">Mentor connected</span>
+            <div class="br-track"><div class="br-fill" id="bf-mentor" style="background:#FF6600"></div></div>
+            <span class="br-pct" id="bp-mentor">&mdash;</span>
+          </div>
+          <div class="br-row">
+            <div class="br-dot" style="background:#C9A84C"></div>
+            <span class="br-lbl">Exploring</span>
+            <div class="br-track"><div class="br-fill" id="bf-explore" style="background:#C9A84C"></div></div>
+            <span class="br-pct" id="bp-explore">&mdash;</span>
+          </div>
+          <div class="br-row">
+            <div class="br-dot" style="background:#917585"></div>
+            <span class="br-lbl">Inactive</span>
+            <div class="br-track"><div class="br-fill" id="bf-inactive" style="background:#917585"></div></div>
+            <span class="br-pct" id="bp-inactive">&mdash;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:14px;">
+      <div class="trend-card">
+        <div class="trend-head">
+          <span class="trend-title">Program Updates</span>
+          <span class="trend-meta" id="updates-meta">No updates yet</span>
+        </div>
+        <div id="updates-feed" class="updates-feed">
+          <p class="no-updates">Updates entered via Admin will appear here.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHAT THIS MEANS -->
+  <div class="section">
+    <div class="section-header">
+      <div>
+        <p class="section-label">The Pilot Program</p>
+        <h2 class="section-title">What this partnership<br>means for <em>Bowen</em></h2>
+      </div>
+      <p class="section-sub">Three ways the Bowen&ndash;Embra partnership creates lasting value for students and faculty.</p>
+    </div>
+    <div class="cards-row">
+      <div class="card">
+        <div class="card-accent"></div>
+        <span class="card-num">01</span>
+        <p class="card-title">Bowen shapes the platform</p>
+        <p class="card-body">As the founding partner, Bowen students and faculty provide direct feedback that determines how Embra works &mdash; before any other institution has access. The tools built here will reflect Bowen&rsquo;s values and standards.</p>
+      </div>
+      <div class="card">
+        <div class="card-accent"></div>
+        <span class="card-num">02</span>
+        <p class="card-title">Real outcomes, tracked</p>
+        <p class="card-body">Embra measures what matters &mdash; student engagement, mentor match quality, and preparation confidence. All data is shared directly and transparently with Bowen administration throughout the semester.</p>
+      </div>
+      <div class="card">
+        <div class="card-accent"></div>
+        <span class="card-num">03</span>
+        <p class="card-title">A legacy of leadership</p>
+        <p class="card-body">The success of this pilot positions Bowen as a leader in legal education innovation. When other law schools adopt Embra, they will be following the precedent Bowen set as the first.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMMITMENT -->
+  <div class="commitment">
+    <div>
+      <p class="section-label">From the Founder</p>
+      <p class="commit-quote">&ldquo;Bowen is not just our first school &mdash; Bowen is the proof point that legal education and technology can grow together with integrity. Every student who joins this pilot is helping build something that will serve thousands of law students long after them.&rdquo;</p>
+      <p class="commit-attr">&mdash; Adrian Bond &nbsp;&middot;&nbsp; Founder &amp; CEO, Embra</p>
+    </div>
+    <div>
+      <div class="commit-list">
+        <div class="commit-item">
+          <div class="commit-dot"></div>
+          <div class="commit-text">
+            <h5>Student Data Protection</h5>
+            <p>Built FERPA-compliant from the ground up. No student data is shared, sold, or used beyond the scope of the educational relationship.</p>
+          </div>
+        </div>
+        <div class="commit-item">
+          <div class="commit-dot"></div>
+          <div class="commit-text">
+            <h5>Faculty &amp; Administration Access</h5>
+            <p>Bowen leadership receives full visibility into platform usage, engagement metrics, and program health through a dedicated partner dashboard.</p>
+          </div>
+        </div>
+        <div class="commit-item">
+          <div class="commit-dot"></div>
+          <div class="commit-text">
+            <h5>Crisis Response Protocol</h5>
+            <p>A documented escalation framework is in place for any student wellness disclosures, in coordination with Bowen&rsquo;s existing support infrastructure.</p>
+          </div>
+        </div>
+        <div class="commit-item">
+          <div class="commit-dot"></div>
+          <div class="commit-text">
+            <h5>End-of-Semester Report</h5>
+            <p>A comprehensive impact report is delivered to Bowen administration at the close of each semester &mdash; fully documenting outcomes, engagement, and recommendations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-left">
+      <span class="footer-logo">Embra</span>
+      <div class="footer-sep"></div>
+      <span class="footer-tagline">AI-powered mentorship for the next generation of lawyers</span>
+    </div>
+    <div class="footer-contact">
+      <strong>Adrian Bond</strong>
+      Founder &amp; CEO, Embra<br>
+      adrianbond@myembra.com &nbsp;&middot;&nbsp; myembra.com
+    </div>
+  </div>
+
+</div>
+
+<!-- PASSWORD MODAL -->
+<div id="pass-modal">
+  <div class="pass-card">
+    <div class="pass-logo">Embra</div>
+    <div class="pass-sub-logo">Admin Access &middot; Partner Dashboard</div>
+    <h2 class="pass-title">Enter Password</h2>
+    <p class="pass-sub">Restricted to Embra administrators only.</p>
+    <label class="pass-lbl">Password</label>
+    <input class="pass-input" id="pass-input" type="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" autocomplete="current-password"/>
+    <p class="pass-err" id="pass-err">Incorrect password &mdash; please try again.</p>
+    <button class="pass-btn" id="passSubmitBtn">Unlock Admin Panel</button>
+    <span class="pass-cancel" id="passCancelBtn">Cancel</span>
+  </div>
+</div>
+
+<!-- ADMIN DRAWER -->
+<div id="admin-panel">
+  <div class="admin-overlay" id="adminOverlay"></div>
+  <div class="admin-drawer">
+    <div class="drawer-head">
+      <div>
+        <div class="drawer-title">Update Dashboard</div>
+        <div class="drawer-sub">Embra Admin &middot; Bowen Pilot Data</div>
+      </div>
+      <button class="drawer-close" id="drawerCloseBtn">&#x2715;</button>
+    </div>
+    <div class="drawer-body">
+      <div class="fsec">
+        <div class="fsec-title">Key Metrics</div>
+        <div class="fgrid">
+          <div class="ff"><label>Enrolled Students</label><input type="number" id="f-enrolled" placeholder="e.g. 47" min="0"/><span class="hint">Total Bowen sign-ups</span></div>
+          <div class="ff"><label>Week-over-Week Growth %</label><input type="number" id="f-growth" placeholder="e.g. 34" min="0"/></div>
+          <div class="ff"><label>Mentor Connections</label><input type="number" id="f-mentors" placeholder="e.g. 18" min="0"/></div>
+          <div class="ff"><label>Satisfaction Score (/ 5)</label><input type="number" id="f-sat" placeholder="e.g. 4.7" min="0" max="5" step="0.1"/></div>
+        </div>
+      </div>
+      <div class="fsec">
+        <div class="fsec-title">Activity Breakdown (%)</div>
+        <div class="fgrid">
+          <div class="ff"><label>Active Weekly %</label><input type="number" id="f-active" placeholder="45" min="0" max="100"/></div>
+          <div class="ff"><label>Mentor Connected %</label><input type="number" id="f-mentor" placeholder="30" min="0" max="100"/></div>
+          <div class="ff"><label>Exploring %</label><input type="number" id="f-explore" placeholder="20" min="0" max="100"/></div>
+          <div class="ff"><label>Inactive %</label><input type="number" id="f-inactive" placeholder="5" min="0" max="100"/></div>
+        </div>
+      </div>
+      <div class="fsec">
+        <div class="fsec-title">Growth Timeline (up to 6 points)</div>
+        <div class="fgrid">
+          <div class="ff"><label>Label 1</label><input type="text" id="fl1" placeholder="Jan"/></div>
+          <div class="ff"><label>Count 1</label><input type="number" id="fv1" placeholder="5" min="0"/></div>
+          <div class="ff"><label>Label 2</label><input type="text" id="fl2" placeholder="Feb"/></div>
+          <div class="ff"><label>Count 2</label><input type="number" id="fv2" placeholder="18" min="0"/></div>
+          <div class="ff"><label>Label 3</label><input type="text" id="fl3" placeholder="Mar"/></div>
+          <div class="ff"><label>Count 3</label><input type="number" id="fv3" placeholder="35" min="0"/></div>
+          <div class="ff"><label>Label 4 (optional)</label><input type="text" id="fl4"/></div>
+          <div class="ff"><label>Count 4</label><input type="number" id="fv4" min="0"/></div>
+          <div class="ff"><label>Label 5 (optional)</label><input type="text" id="fl5"/></div>
+          <div class="ff"><label>Count 5</label><input type="number" id="fv5" min="0"/></div>
+          <div class="ff"><label>Label 6 (optional)</label><input type="text" id="fl6"/></div>
+          <div class="ff"><label>Count 6</label><input type="number" id="fv6" min="0"/></div>
+        </div>
+      </div>
+      <div class="fsec">
+        <div class="fsec-title">Program Updates</div>
+        <p style="font-size:11px;color:var(--ink-lt);margin-bottom:10px;">Add dated updates that appear in the feed on the page.</p>
+        <div class="update-inputs" id="update-inputs"></div>
+        <button class="add-update-btn" id="addUpdateBtn">+ Add Update</button>
+      </div>
+      <div class="fsec">
+        <div class="fsec-title">Context</div>
+        <div class="fgrid">
+          <div class="ff"><label>Cohort Label</label><input type="text" id="f-cohort" placeholder="Spring 2026 Cohort"/></div>
+          <div class="ff"><label>Enrollment Target</label><input type="number" id="f-target" placeholder="100" min="0"/></div>
+        </div>
+      </div>
+    </div>
+    <div class="drawer-foot">
+      <button class="btn-cancel" id="drawerCancelBtn">Cancel</button>
+      <button class="btn-save" id="saveBtn">
+        <svg width="11" height="11" viewBox="0 0 13 13" fill="none"><path d="M2 7l3 3 6-6" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Save &amp; Update
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(function() {
+  var PASS = 'Lakers24!';
+  var D = { updates: [] };
+
+  // ── WIRE UP ALL BUTTONS via addEventListener (no inline onclick) ──
+  document.getElementById('adminBtn').addEventListener('click', openPassModal);
+  document.getElementById('exportBtn').addEventListener('click', function(){ window.print(); });
+  document.getElementById('passSubmitBtn').addEventListener('click', tryPass);
+  document.getElementById('passCancelBtn').addEventListener('click', closePassModal);
+  document.getElementById('pass-modal').addEventListener('click', function(e){ if(e.target===this) closePassModal(); });
+  document.getElementById('pass-input').addEventListener('keydown', function(e){ if(e.key==='Enter') tryPass(); });
+  document.getElementById('adminOverlay').addEventListener('click', closeAdmin);
+  document.getElementById('drawerCloseBtn').addEventListener('click', closeAdmin);
+  document.getElementById('drawerCancelBtn').addEventListener('click', closeAdmin);
+  document.getElementById('saveBtn').addEventListener('click', saveData);
+  document.getElementById('addUpdateBtn').addEventListener('click', function(){ addUpdateRow('',''); });
+
+  // ── PASSWORD ──
+  function openPassModal() {
+    document.getElementById('pass-modal').classList.add('open');
+    setTimeout(function(){ document.getElementById('pass-input').focus(); }, 80);
+  }
+
+  function closePassModal() {
+    document.getElementById('pass-modal').classList.remove('open');
+    document.getElementById('pass-input').value = '';
+    document.getElementById('pass-err').style.display = 'none';
+  }
+
+  function tryPass() {
+    var inp = document.getElementById('pass-input');
+    if (inp.value === PASS) {
+      closePassModal();
+      openAdmin();
+    } else {
+      inp.classList.remove('shake');
+      void inp.offsetWidth;
+      inp.classList.add('shake');
+      document.getElementById('pass-err').style.display = 'block';
+      inp.value = '';
+      setTimeout(function(){ inp.classList.remove('shake'); }, 500);
+    }
+  }
+
+  // ── ADMIN ──
+  function openAdmin() {
+    function setVal(id, v) {
+      if (v !== undefined && v !== null && v !== '') document.getElementById(id).value = v;
+    }
+    setVal('f-enrolled', D.enrolled); setVal('f-growth', D.growth);
+    setVal('f-mentors', D.mentors);   setVal('f-sat', D.sat);
+    setVal('f-active', D.active);     setVal('f-mentor', D.mentor);
+    setVal('f-explore', D.explore);   setVal('f-inactive', D.inactive);
+    setVal('f-cohort', D.cohort);     setVal('f-target', D.target);
+    var ls = D.chartL || [], vs = D.chartV || [];
+    for (var i = 1; i <= 6; i++) {
+      document.getElementById('fl'+i).value = ls[i-1] || '';
+      document.getElementById('fv'+i).value = vs[i-1] !== undefined ? vs[i-1] : '';
+    }
+    var container = document.getElementById('update-inputs');
+    container.innerHTML = '';
+    (D.updates || []).forEach(function(u){ addUpdateRow(u.date, u.text); });
+    document.getElementById('admin-panel').classList.add('open');
+  }
+
+  function closeAdmin() {
+    document.getElementById('admin-panel').classList.remove('open');
+  }
+
+  function addUpdateRow(date, text) {
+    var container = document.getElementById('update-inputs');
+    var row = document.createElement('div');
+    row.className = 'update-input-row';
+    var dInput = document.createElement('input');
+    dInput.type = 'text'; dInput.placeholder = 'Mar 17, 2026';
+    dInput.value = date || ''; dInput.className = 'u-date';
+    var tInput = document.createElement('input');
+    tInput.type = 'text'; tInput.placeholder = 'e.g. First mentor match completed';
+    tInput.value = text || ''; tInput.className = 'u-text';
+    var btn = document.createElement('button');
+    btn.className = 'remove-update'; btn.textContent = '×';
+    btn.addEventListener('click', function(){ row.remove(); });
+    row.appendChild(dInput); row.appendChild(tInput); row.appendChild(btn);
+    container.appendChild(row);
+  }
+
+  // ── SAVE ──
+  function saveData() {
+    function g(id){ return document.getElementById(id).value.trim(); }
+    function n(id){ var v = parseFloat(document.getElementById(id).value); return isNaN(v) ? null : v; }
+
+    D.enrolled = g('f-enrolled'); D.growth = g('f-growth');
+    D.mentors  = g('f-mentors');  D.sat    = g('f-sat');
+    D.active   = n('f-active');   D.mentor = n('f-mentor');
+    D.explore  = n('f-explore');  D.inactive = n('f-inactive');
+    D.cohort   = g('f-cohort');   D.target = g('f-target');
+
+    var ls = [], vs = [];
+    for (var i = 1; i <= 6; i++) {
+      var l = g('fl'+i), v = g('fv'+i);
+      if (l && v !== '') { ls.push(l); vs.push(parseFloat(v)); }
+    }
+    D.chartL = ls; D.chartV = vs;
+
+    D.updates = [];
+    document.querySelectorAll('.update-input-row').forEach(function(row){
+      var date = row.querySelector('.u-date').value.trim();
+      var text = row.querySelector('.u-text').value.trim();
+      if (text) D.updates.push({ date: date, text: text });
+    });
+
+    render();
+    closeAdmin();
+    showToast('Dashboard updated successfully');
+  }
+
+  // ── RENDER ──
+  function render() {
+    rStat('sv-enrolled','sn-enrolled', D.enrolled, '', 'enrolled students via Bowen');
+    rStat('sv-growth',  'sn-growth',   D.growth,   '%', 'week-over-week growth');
+    rStat('sv-mentors', 'sn-mentors',  D.mentors,  '', 'active mentor pairings');
+    rStat('sv-sat',     'sn-sat',      D.sat,      ' / 5', 'avg student satisfaction');
+    if (D.cohort) document.getElementById('dv-cohort').textContent = D.cohort;
+    rBar('bf-active',  'bp-active',  D.active);
+    rBar('bf-mentor',  'bp-mentor',  D.mentor);
+    rBar('bf-explore', 'bp-explore', D.explore);
+    rBar('bf-inactive','bp-inactive',D.inactive);
+    if (D.chartL && D.chartL.length >= 2) buildChart(D.chartL, D.chartV);
+    renderUpdates();
+  }
+
+  function rStat(vid, nid, raw, sfx, note) {
+    var v = document.getElementById(vid);
+    if (raw && raw !== '') {
+      v.innerHTML = raw + sfx;
+      v.classList.remove('blank');
+    } else {
+      v.innerHTML = '<span class="blank">&mdash;</span>';
+    }
+    document.getElementById(nid).textContent = (raw && raw !== '') ? note : 'No data entered';
+  }
+
+  function rBar(fid, pid, val) {
+    document.getElementById(fid).style.width = (val !== null && val !== undefined) ? Math.min(val,100)+'%' : '0%';
+    document.getElementById(pid).textContent  = (val !== null && val !== undefined) ? val+'%' : '—';
+  }
+
+  function buildChart(labels, vals) {
+    document.getElementById('chart-empty').style.display = 'none';
+    var svg = document.getElementById('growth-svg');
+    svg.style.display = 'block';
+    document.getElementById('chart-meta').textContent = labels[0] + ' – ' + labels[labels.length-1];
+
+    var W=520,H=110,pL=26,pR=14,pT=8,pB=22;
+    var max = Math.max.apply(null, vals) || 1;
+    var n = labels.length;
+    var pts = vals.map(function(v,i){
+      return [pL + (i/(n-1))*(W-pL-pR), pT + (1-v/max)*(H-pT-pB)];
+    });
+
+    var lp = 'M ' + pts.map(function(p){ return p.join(','); }).join(' L ');
+    document.getElementById('c-area').setAttribute('d', lp + ' L '+pts[n-1][0]+','+(H-pB)+' L '+pts[0][0]+','+(H-pB)+' Z');
+    document.getElementById('c-line').setAttribute('d', lp);
+
+    document.getElementById('c-dots').innerHTML = '';
+    pts.forEach(function(pt, i){
+      var last = i === n-1;
+      var c = ns('circle');
+      c.setAttribute('cx', pt[0]); c.setAttribute('cy', pt[1]);
+      c.setAttribute('r', last ? 4.5 : 3);
+      c.setAttribute('fill', last ? '#FF6600' : '#6B1C35');
+      if (last){ c.setAttribute('stroke','white'); c.setAttribute('stroke-width','2'); }
+      document.getElementById('c-dots').appendChild(c);
+    });
+
+    document.getElementById('c-xlbls').innerHTML = '';
+    labels.forEach(function(l, i){
+      var t = ns('text');
+      t.setAttribute('x', pts[i][0]); t.setAttribute('y', H-pB+16);
+      t.setAttribute('text-anchor','middle');
+      t.setAttribute('font-family','DM Mono,monospace');
+      t.setAttribute('font-size','9'); t.setAttribute('fill','#917585');
+      t.textContent = l;
+      document.getElementById('c-xlbls').appendChild(t);
+    });
+
+    document.getElementById('c-ylbls').innerHTML = '';
+    [0, Math.round(max/2), max].forEach(function(v){
+      var y = pT + (1-v/max)*(H-pT-pB);
+      var t = ns('text');
+      t.setAttribute('x',0); t.setAttribute('y', y+3);
+      t.setAttribute('font-family','DM Mono,monospace');
+      t.setAttribute('font-size','8'); t.setAttribute('fill','#917585');
+      t.textContent = v;
+      document.getElementById('c-ylbls').appendChild(t);
+    });
+  }
+
+  function renderUpdates() {
+    var feed = document.getElementById('updates-feed');
+    var meta = document.getElementById('updates-meta');
+    if (!D.updates || D.updates.length === 0) {
+      feed.innerHTML = '<p class="no-updates">Updates entered via Admin will appear here.</p>';
+      meta.textContent = 'No updates yet';
+      return;
+    }
+    meta.textContent = D.updates.length + ' update' + (D.updates.length > 1 ? 's' : '');
+    feed.innerHTML = '';
+    var reversed = D.updates.slice().reverse();
+    reversed.forEach(function(u){
+      var row = document.createElement('div');
+      row.className = 'update-item';
+      var dateEl = document.createElement('span');
+      dateEl.className = 'update-date'; dateEl.textContent = u.date || '';
+      var dot = document.createElement('div');
+      dot.className = 'update-dot';
+      var txt = document.createElement('span');
+      txt.className = 'update-text'; txt.textContent = u.text;
+      row.appendChild(dateEl); row.appendChild(dot); row.appendChild(txt);
+      feed.appendChild(row);
+    });
+  }
+
+  function ns(tag){ return document.createElementNS('http://www.w3.org/2000/svg', tag); }
+
+  function showToast(msg) {
+    var t = document.getElementById('toast');
+    t.textContent = '✓  ' + msg;
+    t.classList.add('show');
+    setTimeout(function(){ t.classList.remove('show'); }, 2600);
+  }
+
+  window.addEventListener('beforeprint', function(){
+    document.title = 'Embra x Bowen School of Law — Partner Briefing Spring 2026';
+  });
+
+})();
+</script>
+</body>
+</html>
